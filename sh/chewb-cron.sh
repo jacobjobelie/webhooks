@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/chewb-cron.git';
-RELEASE="/home/samradelie/crons/chewb-cron";
+RELEASE="/home/samradelie/crons/chewb-cron/";
 
 # Fetch Latest Code
 pm2 stop chewb-cron

@@ -1,3 +1,4 @@
+var execFile = require('child_process').execFile;
 module.exports = function(github) {
 
     function _exec(file) {
