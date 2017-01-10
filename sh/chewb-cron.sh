@@ -5,8 +5,13 @@ RELEASE="/home/samradelie/crons/chewb-cron";
 
 # Fetch Latest Code
 pm2 stop chewb-cron
-rm -R $RELEASE
-git clone -b master $REPO $RELEASE;
+pm2 delete chewb-cron
+if [ -d "$RELEASE" ]; then
+  cd $RELEASE
+  git pull origin master
+else
+  git clone -b master $REPO $RELEASE;
+fi
 cd $RELEASE
 npm i
 pm2 start index.js --name chewb-cron -f
