@@ -1,5 +1,7 @@
 var execFile = require('child_process').execFile;
 var githubhook = require('githubhook');
+var readDir = require('readdir');
+var fs = require('fs');
 var github = githubhook({
     host: '127.0.0.1',
     port: 1808,
@@ -7,6 +9,11 @@ var github = githubhook({
     secret: 'rad',
     logger: console,
 });
+
+var filesArray = readDir.readSync( 'sh', ['**.sh'], readDir.ABSOLUTE_PATHS  );
+filesArray.forEach(p=>{
+    fs.chmodSync(p, '0777')
+})
 
 github.listen();
 

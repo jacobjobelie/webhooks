@@ -1,4 +1,8 @@
 {
   "name": "webhooks",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "githubhook": "^1.7.1",
+    "readdir": "0.0.13"
+  }
 }
