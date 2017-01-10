@@ -31,6 +31,4 @@ module.exports = function(github) {
     github.on('mars.wtf:refs/heads/master', function(data) {
         _exec('mars.wtf')
     })
-
-
 }
