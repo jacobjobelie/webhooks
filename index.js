@@ -31,11 +31,6 @@ function _exec(file){
     });
 }
 
-
-github.on('webhooks:refs/heads/master', function (data) {
-    _exec('webhooks')
-})
-
 github.on('chewb-cron:refs/heads/master', function (data) {
     _exec('chewb-cron')
 })
