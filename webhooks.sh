@@ -5,6 +5,7 @@ RELEASE="/home/samradelie/webhooks/";
 
 # Fetch Latest Code
 pm2 stop webhooks
+pm2 delete webhooks
 if [ -d "$RELEASE" ]; then
   git pull origin master
 else
