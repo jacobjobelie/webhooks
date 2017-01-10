@@ -13,6 +13,10 @@ module.exports = function(github) {
         });
     }
 
+    github.on('rad-redis:refs/heads/master', function(data) {
+        _exec('rad-redis')
+    })
+
     github.on('chewb-live:refs/heads/master', function(data) {
         _exec('chewb-live')
     })
