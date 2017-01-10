@@ -28,5 +28,9 @@ module.exports = function(github) {
         _exec('rad.wtf')
     })
 
+    github.on('mars.wtf:refs/heads/master', function(data) {
+        _exec('mars.wtf')
+    })
+
 
 }
