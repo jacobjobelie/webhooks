@@ -25,6 +25,6 @@ module.exports = function(github) {
     })
 
     github.on('rad.wtf:refs/heads/master', function(data) {
-        _exec('samelie')
+        _exec('rad.wtf')
     })
 }
