@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/webhooks.git';
-RELEASE="/home/samradelie/webhook/";
+RELEASE="/home/samradelie/webhooks/";
 
 # Fetch Latest Code
 pm2 stop webhooks
