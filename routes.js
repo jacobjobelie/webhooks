@@ -23,4 +23,8 @@ module.exports = function(github) {
     github.on('samelie:refs/heads/master', function(data) {
         _exec('samelie')
     })
+
+    github.on('rad.wtf:refs/heads/master', function(data) {
+        _exec('samelie')
+    })
 }
