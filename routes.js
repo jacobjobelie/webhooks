@@ -19,4 +19,8 @@ module.exports = function(github) {
     github.on('add.dog:refs/heads/master', function(data) {
         _exec('add.dog')
     });
+
+    github.on('samelie:refs/heads/master', function(data) {
+        _exec('samelie')
+    })
 }
