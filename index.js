@@ -23,7 +23,7 @@ function _exec(file) {
         maxBuffer: 1024 * 1024 // Increase max buffer to 1mb
     };
     console.log(`${file}.sh`);
-    execFile(`./${file}.sh`, execOptions, function(error, stdout, stderr) {
+    execFile(`../${file}.sh`, execOptions, function(error, stdout, stderr) {
         if (error) {
             console.log(error)
         }
