@@ -7,7 +7,7 @@ RELEASE="/home/samradelie/webhooks/";
 pm2 stop webhooks
 pm2 delete webhooks
 if [ -d "$RELEASE" ]; then
-  git checkout webhooks.sh
+  git stash
   git pull origin master
 else
   git clone -b master $REPO $RELEASE;
