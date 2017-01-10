@@ -13,6 +13,10 @@ module.exports = function(github) {
         });
     }
 
+    github.on('chewb-live:refs/heads/master', function(data) {
+        _exec('chewb-live')
+    })
+
     github.on('chewb-cron:refs/heads/master', function(data) {
         _exec('chewb-cron')
     })
