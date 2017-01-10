@@ -7,10 +7,12 @@ RELEASE="/home/samradelie/webhooks/";
 pm2 stop webhooks
 pm2 delete webhooks
 if [ -d "$RELEASE" ]; then
+  git checkout webhooks.sh
   git pull origin master
 else
   git clone -b master $REPO $RELEASE;
 fi
 cd $RELEASE
 npm i
+chmod +x webhooks.sh
 pm2 start index.js --name webhooks
