@@ -14,4 +14,4 @@ else
 fi
 cd $RELEASE
 npm i
-pm2 start index.js --name rad-redis -f
+pm2 start live.js --name rad-redis -f
