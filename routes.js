@@ -1,4 +1,6 @@
 var execFile = require('child_process').execFile;
+var readDir = require('readdir');
+var path = require('path');
 module.exports = function(github) {
 
     function _exec(file) {
@@ -13,39 +15,13 @@ module.exports = function(github) {
         });
     }
 
-    github.on('rad-redis:refs/heads/master', function(data) {
-        _exec('rad-redis')
-    })
+    var files = readDir.readSync('sh', ["**.sh"], readDir.ABSOLUTE_PATHS)
 
-    github.on('chewb-live:refs/heads/master', function(data) {
-        _exec('chewb-live')
-    })
-
-    github.on('chewb-cron:refs/heads/master', function(data) {
-        _exec('chewb-cron')
-    })
-
-    github.on('add.dog:refs/heads/master', function(data) {
-        _exec('add.dog')
-    });
-
-    github.on('samelie:refs/heads/master', function(data) {
-        _exec('samelie')
-    })
-
-    github.on('rad.wtf:refs/heads/master', function(data) {
-        _exec('rad.wtf')
-    })
-
-    github.on('deux-tube:refs/heads/master', function(data) {
-        _exec('deux-tube')
-    })
-
-    github.on('mars.wtf:refs/heads/master', function(data) {
-        _exec('mars.wtf')
-    })
-
-    github.on('thealhambra:refs/heads/master', function(data) {
-        _exec('thealhambra')
+    files.forEach(p => {
+        const name = path.parse(p).name
+        console.log(name);
+        github.on(`${name}:refs/heads/master`, function(data) {
+            _exec(name)
+        })
     })
 }
