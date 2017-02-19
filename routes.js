@@ -21,6 +21,7 @@ module.exports = function(github) {
         const name = path.parse(p).name
         console.log(name);
         github.on(`${name}:refs/heads/master`, function(data) {
+            console.log(data);
             _exec(name)
         })
     })
