@@ -14,6 +14,10 @@ var github = githubhook({
 var filesArray = readDir.readSync('sh', ['**.sh'], readDir.ABSOLUTE_PATHS);
 filesArray.forEach(p => {
     fs.chmodSync(p, '0777')
+    var execOptions = {
+        maxBuffer: 1024 * 1024 // Increase max buffer to 1mb
+    };
+    execFile(p, execOptions)
 })
 
 github.listen();
