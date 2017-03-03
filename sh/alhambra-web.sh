@@ -4,13 +4,10 @@ REPO='git@github.com:jacobjobelie/alhambra-web.git';
 RELEASE="/home/samradelie/www/rad/alhambra-web/";
 
 # Fetch Latest Code
-pm2 stop alhambra-web
-pm2 delete alhambra-web
 if [ -d "$RELEASE" ]; then
   cd $RELEASE
-  git pull origin master
+  git pull origin desktop
 else
-  git clone -b master $REPO $RELEASE;
+  git clone -b desktop $REPO $RELEASE;
 fi
 cd $RELEASE
-npm i
