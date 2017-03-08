@@ -6,8 +6,8 @@ RELEASE="/home/samradelie/www/rad/alhambra-web/";
 # Fetch Latest Code
 if [ -d "$RELEASE" ]; then
   cd $RELEASE
-  git pull origin master
+  git pull origin desktop
 else
-  git clone -b master $REPO $RELEASE;
+  git clone -b desktop $REPO $RELEASE;
 fi
 cd $RELEASE

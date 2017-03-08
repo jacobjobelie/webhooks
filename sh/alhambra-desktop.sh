@@ -13,4 +13,3 @@ else
   git clone -b master $REPO $RELEASE;
 fi
 cd $RELEASE
-npm i
