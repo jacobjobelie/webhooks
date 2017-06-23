@@ -6,6 +6,7 @@ RELEASE="/home/samradelie/www/rad/perpetual-till/";
 # Fetch Latest Code
 pm2 stop perpetual-till
 pm2 delete perpetual-till
+rm -rf $RELEASE
 if [ -d "$RELEASE" ]; then
   cd $RELEASE
   git pull origin master

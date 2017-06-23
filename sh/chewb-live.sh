@@ -6,6 +6,7 @@ RELEASE="/home/samradelie/www/rad/chewb-live/";
 # Fetch Latest Code
 pm2 stop chewb-live
 pm2 delete chewb-live
+rm -rf $RELEASE
 if [ -d "$RELEASE" ]; then
   cd $RELEASE
   git pull origin master

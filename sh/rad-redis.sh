@@ -6,6 +6,7 @@ RELEASE="/home/samradelie/www/rad/rad-redis/";
 # Fetch Latest Code
 pm2 stop rad-redis
 pm2 delete rad-redis
+rm -rf $RELEASE
 if [ -d "$RELEASE" ]; then
   cd $RELEASE
   git pull origin master

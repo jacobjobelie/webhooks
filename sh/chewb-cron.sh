@@ -6,6 +6,7 @@ RELEASE="/home/samradelie/crons/chewb-cron/";
 # Fetch Latest Code
 pm2 stop chewb-cron
 pm2 delete chewb-cron
+rm -rf $RELEASE
 if [ -d "$RELEASE" ]; then
   cd $RELEASE
   git pull origin master
