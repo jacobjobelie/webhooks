@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/rad-redis.git';
-RELEASE="/var/www/rad.wtf/html/rad-redis/";
+RELEASE="/var/www/rad.wtf/html/www/rad-redis/";
 
 # Fetch Latest Code
 pm2 stop rad-redis
