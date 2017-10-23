@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:samelie/perpetual-till.git';
-RELEASE="/home/samradelie/www/rad/perpetual-till/";
+RELEASE="/var/www/rad.wtf/html/www/rad/perpetual-till/";
 
 # Fetch Latest Code
 pm2 stop perpetual-till

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:samelie/alhambra-desktop.git';
-RELEASE="/home/samradelie/www/rad/alhambra-desktop/";
+RELEASE="/var/www/rad.wtf/html/www/rad/alhambra-desktop/";
 
 # Fetch Latest Code
 pm2 stop alhambra-desktop

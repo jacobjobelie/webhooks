@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/rad-redis.git';
-RELEASE="/home/samradelie/www/rad/rad-redis/";
+RELEASE="/var/www/rad.wtf/html/rad-redis/";
 
 # Fetch Latest Code
 pm2 stop rad-redis
 pm2 delete rad-redis
+mkdir -p $RELEASE
 rm -rf $RELEASE
 if [ -d "$RELEASE" ]; then
+  mkdir -p $RELEASE
   cd $RELEASE
   git pull origin master
 else

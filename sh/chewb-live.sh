@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/chewb-live.git';
-RELEASE="/home/samradelie/www/rad/chewb-live/";
+RELEASE="/var/www/rad.wtf/html/www/rad/chewb-live/";
 
 # Fetch Latest Code
 pm2 stop chewb-live

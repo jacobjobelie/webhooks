@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/alhambra-web.git';
-RELEASE="/home/samradelie/www/rad/alhambra-web/";
+RELEASE="/var/www/rad.wtf/html/www/rad/alhambra-web/";
 
 # Fetch Latest Code
 if [ -d "$RELEASE" ]; then
