@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/chewb-live.git';
-RELEASE="/var/www/rad.wtf/html/www/rad/chewb-live/";
+RELEASE="/var/www/rad.wtf/html/chewb-live/";
 
 # Fetch Latest Code
 pm2 stop chewb-live
 pm2 delete chewb-live
+mkdir -p $RELEASE
 rm -rf $RELEASE
 if [ -d "$RELEASE" ]; then
+  mkdir -p $RELEASE
   cd $RELEASE
   git pull origin master
 else
