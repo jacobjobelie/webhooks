@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:jacobjobelie/webhooks.git';
-RELEASE="/home/samradelie/webhooks/";
+RELEASE="/var/www/rad.wtf/webhooks/";
 
 # Fetch Latest Code
 pm2 stop webhooks
@@ -14,4 +14,4 @@ else
 fi
 cd $RELEASE
 npm i
-pm2 start index.js --name webhooks
+pm2 start index.js --name webhooks -f
