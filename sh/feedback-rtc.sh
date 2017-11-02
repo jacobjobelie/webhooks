@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO='git@github.com:samradical/feedback-rtc.git';
+REPO='https://github.com/samradical/feedback-rtc.git';
 RELEASE="/home/Sam/NODE/feedback-rtc/";
 
 # Fetch Latest Code
