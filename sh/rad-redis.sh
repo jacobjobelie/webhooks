@@ -18,3 +18,4 @@ fi
 cd $RELEASE
 npm i
 pm2 start live.js --name rad-redis -f
+exit

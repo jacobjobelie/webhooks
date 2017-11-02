@@ -15,3 +15,4 @@ fi
 cd $RELEASE
 npm i
 pm2 start index.js --name webhooks -f
+exit

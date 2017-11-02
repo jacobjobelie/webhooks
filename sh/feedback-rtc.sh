@@ -18,3 +18,4 @@ fi
 cd $RELEASE
 npm i
 pm2 start index.js --name feedback-rtc -f
+exit

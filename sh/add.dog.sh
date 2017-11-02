@@ -9,3 +9,4 @@ RELEASE="/var/www/rad.wtf/html/www/add.dog/adddog/www/";
 [ -d $RELEASE_DIR ] || mkdir $RELEASE_DIR;
 cd $RELEASE_DIR;
 git clone -b master $REPO $RELEASE;
+exit

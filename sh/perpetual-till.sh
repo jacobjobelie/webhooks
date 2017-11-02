@@ -16,3 +16,4 @@ fi
 cd $RELEASE
 npm i
 pm2 start index.js --name perpetual-till -f
+exit

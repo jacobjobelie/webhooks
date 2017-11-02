@@ -9,3 +9,4 @@ RELEASE="/var/www/rad.wtf/html/www/rad.wtf/www/";
 [ -d $RELEASE_DIR ] || mkdir -p $RELEASE_DIR;
 cd $RELEASE_DIR;
 git clone -b master $REPO $RELEASE;
+exit

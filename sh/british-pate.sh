@@ -9,3 +9,4 @@ RELEASE="/var/www/rad.wtf/html/www/rad/british-pate/";
 [ -d $RELEASE_DIR ] || mkdir $RELEASE_DIR;
 cd $RELEASE_DIR;
 git clone -b master $REPO $RELEASE;
+exit
