@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 REPO='git@github.com:samradical/feedback-rtc.git';
-RELEASE="/home/Sam/NODE/";
+RELEASE="/home/Sam/NODE/feedback-rtc/";
 
 # Fetch Latest Code
 pm2 stop feedback-rtc
