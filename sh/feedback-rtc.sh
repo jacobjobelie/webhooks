@@ -7,14 +7,7 @@ RELEASE="/home/Sam/NODE/feedback-rtc/";
 pm2 stop feedback-rtc
 pm2 delete feedback-rtc
 rm -rf $RELEASE
-mkdir -p $RELEASE
-if [ -d "$RELEASE" ]; then
-  mkdir -p $RELEASE
-  cd $RELEASE
-  git pull origin master
-else
-  git clone -b master $REPO $RELEASE;
-fi
+git clone -b master $REPO $RELEASE;
 cd $RELEASE
 npm i
 pm2 start index.js --name feedback-rtc -f
